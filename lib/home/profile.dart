@@ -5,10 +5,10 @@ class Profilescreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFC7D9FE),
-      body: SafeArea(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Color(0xFFC7D9FE),
+        body: Column(
           children: [
             const SizedBox(
               height: 10,

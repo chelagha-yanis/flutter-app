@@ -28,38 +28,40 @@ class _MyAppState extends State<app> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: _screens[curentindex],
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: curentindex,
-          onTap: (index) {
-            setState(() {
-              curentindex = index;
-            });
-          },
-          type: BottomNavigationBarType.fixed,
-          showSelectedLabels: true,
-          showUnselectedLabels: false,
-          selectedItemColor: Color(0xFF20005E),
-          unselectedItemColor: Color(0xFF001E5E),
-          items: const [
-            BottomNavigationBarItem(
-              label: 'home',
-              icon: Icon(Icons.home),
-            ),
-            BottomNavigationBarItem(
-              label: 'cart',
-              icon: Icon(Icons.shopping_cart),
-            ),
-            BottomNavigationBarItem(
-              label: 'notifications',
-              icon: Icon(Icons.notifications),
-            ),
-            BottomNavigationBarItem(
-              label: 'profile',
-              icon: Icon(Icons.person),
-            )
-          ],
+      home: SafeArea(
+        child: Scaffold(
+          body: _screens[curentindex],
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: curentindex,
+            onTap: (index) {
+              setState(() {
+                curentindex = index;
+              });
+            },
+            type: BottomNavigationBarType.fixed,
+            showSelectedLabels: true,
+            showUnselectedLabels: false,
+            selectedItemColor: Color(0xFF20005E),
+            unselectedItemColor: Color(0xFF001E5E),
+            items: const [
+              BottomNavigationBarItem(
+                label: 'home',
+                icon: Icon(Icons.home),
+              ),
+              BottomNavigationBarItem(
+                label: 'cart',
+                icon: Icon(Icons.shopping_cart),
+              ),
+              BottomNavigationBarItem(
+                label: 'notifications',
+                icon: Icon(Icons.notifications),
+              ),
+              BottomNavigationBarItem(
+                label: 'profile',
+                icon: Icon(Icons.person),
+              )
+            ],
+          ),
         ),
       ),
     );
